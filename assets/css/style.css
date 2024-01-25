@@ -7,6 +7,14 @@
     color: hsl(228, 45%, 44%);
 }
 
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
 :root {
     /* neutral */
     --almost-white: hsl(0, 0%, 98%);
@@ -14,7 +22,257 @@
     --almost-black: hsl(0, 0%, 8%);
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    min-height: 100vh;
     font-family: "Epilogue", sans-serif;
     /* 500,700 */
+}
+
+/* header */
+header .hidden {
+    display: none;
+}
+
+.bootstrap-header {
+    width: 488px;
+}
+
+.bootstrap-header .container-fluid {
+    background-color: var(--almost-white);
+}
+
+/* side-menu */
+.bootstrap-header button.navbar-toggler {
+    border: none;
+}
+
+.bootstrap-header span.navbar-toggler-icon {
+    background-image: url(../../images/icon-menu.svg);
+}
+
+.bootstrap-header button.btn-close {
+    background-image: url(../../images/icon-close-menu.svg);
+}
+
+.bootstrap-header a.nav-link.down-icon::after {
+    content: url(../../images/icon-arrow-down.svg);
+    margin-left: .25rem;
+}
+
+.bootstrap-header ul.dropdown-menu.show {
+    border: none;
+}
+
+.bootstrap-header .dropdown-menu {
+    padding: 0;
+}
+
+.bootstrap-header .dropdown-menu li {
+    display: flex;
+    align-items: center;
+    margin: .75rem 0 .25rem 1.5rem;
+}
+
+.bootstrap-header .dropdown-menu li img {
+    width: 15px;
+    height: fit-content;
+}
+
+.bootstrap-header form.d-flex.mt-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--medium-grey);
+}
+
+.bootstrap-header form.d-flex.mt-3 label {
+    cursor: pointer;
+}
+
+.bootstrap-header form.d-flex.mt-3 label:hover {
+    color: var(--almost-black);
+}
+
+.bootstrap-header form.d-flex.mt-3 button:hover {
+    color: var(--almost-black);
+    background-color: var(--almost-white);
+}
+
+.bootstrap-header button.btn.btn-outline-success {
+    width: 65%;
+    margin-top: 1rem;
+    color: var(--medium-grey);
+    border: solid 2px var(--medium-grey);
+    border-radius: 15px;
+}
+
+/* main */
+main .main-display .right-display {
+    background-image: url(../../images/image-hero-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 376px;
+}
+
+main .main-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 488px;
+}
+
+main .right-display .split {
+    display: contents;
+}
+
+main .main-display h1 {
+    margin: 2rem 0 1rem 0;
+    font-weight: 700;
+    font-size: 2.5rem;
+    padding: 0 2rem;
+}
+
+main .main-display p {
+    color: var(--medium-grey);
+    padding: 0 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+main .main-display button {
+    background-color: var(--almost-black);
+    color: var(--almost-white);
+    font-weight: 500;
+    font-size: 13px;
+    border-radius: 10px;
+    padding: .70rem 1rem;
+    margin-bottom: 2rem;
+    border: none;
+}
+
+main .main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+main .main-footer img {
+    margin: 0 1rem;
+}
+
+/* main ending */
+
+@media screen and (min-width: 693px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    header .bootstrap-header {
+        display: none;
+    }
+
+    header .header-made {
+        /* display: block; */
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header .header-one {
+        display: flex;
+    }
+
+    header .header-one button {
+        background-color: var(--almost-white);
+        color: var(--medium-grey);
+        border: none;
+    }
+
+    header .header-one button:hover {
+        background-color: var(--almost-white);
+        color: var(--almost-black);
+        border: none;
+    }
+
+    header .header-one button:focus {
+        background-color: var(--almost-white);
+        color: var(--almost-black);
+        border: none;
+    }
+
+    /* header .header-one button:active {
+        background-color: var(--almost-white);
+        color: var(--almost-black);
+        border: none;
+    } */
+
+    header .header-one button.btn.btn-secondary::after {
+        content: url(../../images/icon-arrow-down.svg);
+    }
+
+    header .unordered {
+        display: flex;
+    }
+
+    header .header-one li {
+        margin: 0 1rem;
+        list-style-type: none;
+    }
+
+    header .header-one a {
+        text-decoration: none;
+    }
+
+    header .header-two {
+        display: flex;
+    }
+
+    header .header-two p {
+        margin-right: 1rem;
+    }
+
+    header .header-two a {
+        text-decoration: none;
+    }
+
+/* main */
+    main {
+        display: flex;
+    }
+
+    main .main-display .right-display {
+        display: none;
+    }
+
+    main .left-display {
+        background-image: url(../../images/image-hero-desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 451px;
+        height: 602px;
+    }
+
+    main .main-display {}
+
+
+    /* main .main-display .left-display {
+        background-image: url(../../images/image-hero-desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 300px;
+    } */
 }
